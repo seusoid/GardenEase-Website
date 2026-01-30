@@ -1,0 +1,116 @@
+# YOLO Plant Detection Configuration
+# Professional configuration for plant classification with 70+ classes
+
+# Dataset Configuration
+dataset:
+  path: "D:/Projects/mujeb/model trainng/Plants_Datadet"  # Absolute path to dataset
+  train: "train"          # Training data folder
+  val: "val"              # Validation data folder
+  test: "test"            # Test data folder
+  nc: 70                  # Number of classes (will be auto-detected)
+  names: []               # Class names (will be auto-populated)
+
+# Model Configuration
+model:
+  architecture: "yolov8n-cls.pt"  # YOLOv8 classification model
+  pretrained: true                # Use pretrained weights
+  freeze_backbone: false          # Whether to freeze backbone layers
+
+# Training Configuration
+training:
+  epochs: 35                     # Number of training epochs
+  batch_size: 32                  # Batch size (optimized for RTX 4070 Super)
+  imgsz: 256                      # Input image size (256x256)
+  device: "auto"                  # Device selection (auto for CUDA detection)
+  workers: 8                      # Number of data loading workers
+  patience: 2                    # Early stopping patience
+  save_period: 10                 # Save checkpoint every N epochs
+  
+  # Optimization
+  optimizer: "AdamW"              # Optimizer choice
+  lr0: 0.001                      # Initial learning rate
+  lrf: 0.01                       # Final learning rate factor
+  momentum: 0.937                 # SGD momentum/Adam beta1
+  weight_decay: 0.0005            # Optimizer weight decay
+  warmup_epochs: 3.0              # Warmup epochs
+  warmup_momentum: 0.8            # Warmup initial momentum
+  warmup_bias_lr: 0.1             # Warmup initial bias lr
+  
+  # Loss weights
+  box: 7.5                        # Box loss gain
+  cls: 0.5                        # Classification loss gain
+  dfl: 1.5                        # DFL loss gain
+  
+  # Augmentation (minimal as requested)
+  hsv_h: 0.015                    # Image HSV-Hue augmentation (fraction)
+  hsv_s: 0.7                      # Image HSV-Saturation augmentation (fraction)
+  hsv_v: 0.4                      # Image HSV-Value augmentation (fraction)
+  degrees: 0.0                    # Image rotation (+/- deg)
+  translate: 0.1                  # Image translation (+/- fraction)
+  scale: 0.5                      # Image scale (+/- gain)
+  shear: 0.0                      # Image shear (+/- deg)
+  perspective: 0.0                # Image perspective (+/- fraction), range 0-0.001
+  flipud: 0.0                     # Image flip up-down (probability)
+  fliplr: 0.5                     # Image flip left-right (probability)
+  mosaic: 1.0                     # Image mosaic (probability)
+  mixup: 0.0                      # Image mixup (probability)
+  copy_paste: 0.0                 # Segment copy-paste (probability)
+
+# Validation Configuration
+validation:
+  val: true                       # Validate during training
+  save_json: false                # Save a COCO-JSON results file
+  save_hybrid: false              # Save hybrid version of labels
+  conf: 0.001                     # Confidence threshold
+  iou: 0.6                        # NMS IoU threshold
+  max_det: 300                    # Maximum detections per image
+  half: true                      # Use FP16 half-precision inference
+  dnn: false                      # Use OpenCV DNN for ONNX inference
+
+# Inference Configuration
+inference:
+  conf: 0.25                      # Confidence threshold for inference
+  iou: 0.45                       # NMS IoU threshold for inference
+  max_det: 1000                   # Maximum detections per image
+  classes: null                   # Filter by class: --classes 0, or --classes 0 2 3
+  agnostic_nms: false             # Class-agnostic NMS
+  augment: false                  # Augmented inference
+  visualize: false                # Visualize features
+  update: false                   # Update all models
+  project: "runs/detect"           # Save results to project/name
+  name: "exp"                     # Save results to project/name
+  exist_ok: false                 # Existing project/name ok, do not increment
+  line_thickness: 3               # Bounding box thickness (pixels)
+  hide_labels: false              # Hide labels
+  hide_conf: false                # Hide confidences
+  half: false                     # Use FP16 half-precision inference
+  dnn: false                      # Use OpenCV DNN for ONNX inference
+
+# System Configuration
+system:
+  cuda: true                      # Use CUDA if available
+  cudnn_benchmark: true           # Use cudnn benchmark
+  deterministic: false            # Deterministic training
+  seed: 42                        # Random seed for reproducibility
+  
+# Logging Configuration
+logging:
+  verbose: true                   # Verbose output
+  save_txt: false                 # Save results to *.txt
+  save_conf: false                # Save confidences in --save-txt labels
+  save_crop: false                # Save cropped prediction boxes
+  show_labels: true               # Show labels on plots
+  show_conf: true                 # Show confidences on plots
+  vid_stride: 1                   # Video frame-rate stride
+  retina_masks: false             # Use high-resolution segmentation masks
+  boxes: true                     # Show boxes in segmentation predictions
+
+# Performance Optimization
+performance:
+  cache: false                    # Cache images for faster training
+  amp: true                       # Automatic Mixed Precision
+  fraction: 1.0                   # Dataset fraction to train on
+  profile: false                  # Profile ONNX and TensorRT speeds
+  overlap_mask: true              # Masks should overlap during training
+  mask_ratio: 4                   # Mask downsample ratio
+  dropout: 0.1                    # Use dropout regularization 

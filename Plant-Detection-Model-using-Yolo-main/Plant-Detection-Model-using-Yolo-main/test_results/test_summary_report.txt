@@ -1,0 +1,492 @@
+================================================================================
+YOLO PLANT DETECTION MODEL TEST RESULTS
+================================================================================
+
+Model Path: runs\plant_detection_20250628_150801\training\yolo_plant_detection\weights\best.pt
+Test Dataset: D:\Projects\mujeb\model trainng\Plants_Datadet\test
+Test Date: 2025-06-28 21:36:26
+
+OVERALL PERFORMANCE
+----------------------------------------
+Overall Accuracy: 0.8953 (89.53%)
+Top-5 Accuracy: 0.0000 (0.00%)
+Total Images: 22868
+Processed Images: 22868
+Testing Time: 308.46 seconds
+Processing Speed: 74.14 images/second
+
+PER-CLASS PERFORMANCE
+----------------------------------------
+Acacia dealbata Link:
+  Accuracy: 0.8756 (87.56%)
+  Precision: 0.9135
+  Recall: 0.8756
+  F1-Score: 0.8942
+  Support: 193
+
+Aegopodium podagraria L:
+  Accuracy: 0.8996 (89.96%)
+  Precision: 0.8916
+  Recall: 0.8996
+  F1-Score: 0.8956
+  Support: 448
+
+Anemone alpina L:
+  Accuracy: 0.9291 (92.91%)
+  Precision: 0.9555
+  Recall: 0.9291
+  F1-Score: 0.9421
+  Support: 254
+
+Anemone hepatica L:
+  Accuracy: 0.9636 (96.36%)
+  Precision: 0.9609
+  Recall: 0.9636
+  F1-Score: 0.9622
+  Support: 357
+
+Anemone hupehensis (Lemoine) Lemoine:
+  Accuracy: 0.9179 (91.79%)
+  Precision: 0.9620
+  Recall: 0.9179
+  F1-Score: 0.9394
+  Support: 414
+
+Anemone nemorosa L:
+  Accuracy: 0.9654 (96.54%)
+  Precision: 0.9519
+  Recall: 0.9654
+  F1-Score: 0.9586
+  Support: 636
+
+Angelica sylvestris L:
+  Accuracy: 0.8822 (88.22%)
+  Precision: 0.8957
+  Recall: 0.8822
+  F1-Score: 0.8889
+  Support: 331
+
+Anthurium andraeanum Linden ex AndrÃ©:
+  Accuracy: 0.9881 (98.81%)
+  Precision: 0.9811
+  Recall: 0.9881
+  F1-Score: 0.9846
+  Support: 421
+
+Barbarea vulgaris R.Br:
+  Accuracy: 0.8861 (88.61%)
+  Precision: 0.8950
+  Recall: 0.8861
+  F1-Score: 0.8905
+  Support: 202
+
+Cirsium arvense (L.) Scop:
+  Accuracy: 0.9081 (90.81%)
+  Precision: 0.8650
+  Recall: 0.9081
+  F1-Score: 0.8860
+  Support: 642
+
+Cirsium vulgare (Savi) Ten:
+  Accuracy: 0.9208 (92.08%)
+  Precision: 0.9323
+  Recall: 0.9208
+  F1-Score: 0.9265
+  Support: 972
+
+Cucurbita maxima Duchesne:
+  Accuracy: 0.6310 (63.10%)
+  Precision: 0.6584
+  Recall: 0.6310
+  F1-Score: 0.6444
+  Support: 168
+
+Cucurbita pepo L:
+  Accuracy: 0.7085 (70.85%)
+  Precision: 0.7164
+  Recall: 0.7085
+  F1-Score: 0.7124
+  Support: 271
+
+Cymbalaria muralis P.Gaertn., B.Mey. & Scherb:
+  Accuracy: 0.9645 (96.45%)
+  Precision: 0.9532
+  Recall: 0.9645
+  F1-Score: 0.9588
+  Support: 507
+
+Dryopteris filix-mas (L.) Schott:
+  Accuracy: 0.9215 (92.15%)
+  Precision: 0.9617
+  Recall: 0.9215
+  F1-Score: 0.9412
+  Support: 191
+
+Epipactis helleborine (L.) Crantz:
+  Accuracy: 0.9716 (97.16%)
+  Precision: 0.9344
+  Recall: 0.9716
+  F1-Score: 0.9526
+  Support: 176
+
+Fittonia albivenis (Lindl. ex Veitch) Brummitt:
+  Accuracy: 0.9899 (98.99%)
+  Precision: 0.9657
+  Recall: 0.9899
+  F1-Score: 0.9777
+  Support: 199
+
+Fragaria vesca L:
+  Accuracy: 0.9683 (96.83%)
+  Precision: 0.9656
+  Recall: 0.9683
+  F1-Score: 0.9669
+  Support: 725
+
+Helminthotheca echioides (L.) Holub:
+  Accuracy: 0.8230 (82.30%)
+  Precision: 0.8230
+  Recall: 0.8230
+  F1-Score: 0.8230
+  Support: 243
+
+Humulus lupulus L:
+  Accuracy: 0.9153 (91.53%)
+  Precision: 0.8964
+  Recall: 0.9153
+  F1-Score: 0.9058
+  Support: 378
+
+Hypericum androsaemum L:
+  Accuracy: 0.9492 (94.92%)
+  Precision: 0.9529
+  Recall: 0.9492
+  F1-Score: 0.9511
+  Support: 256
+
+Hypericum calycinum L:
+  Accuracy: 0.9562 (95.62%)
+  Precision: 0.9562
+  Recall: 0.9562
+  F1-Score: 0.9562
+  Support: 365
+
+Kniphofia uvaria (L.) Hook:
+  Accuracy: 0.9781 (97.81%)
+  Precision: 0.9781
+  Recall: 0.9781
+  F1-Score: 0.9781
+  Support: 183
+
+Lactuca serriola L:
+  Accuracy: 0.8944 (89.44%)
+  Precision: 0.8819
+  Recall: 0.8944
+  F1-Score: 0.8881
+  Support: 568
+
+Lamium album L:
+  Accuracy: 0.9140 (91.40%)
+  Precision: 0.9111
+  Recall: 0.9140
+  F1-Score: 0.9126
+  Support: 314
+
+Lamium galeobdolon (L.) L:
+  Accuracy: 0.9573 (95.73%)
+  Precision: 0.9724
+  Recall: 0.9573
+  F1-Score: 0.9648
+  Support: 515
+
+Lamium maculatum (L.) L:
+  Accuracy: 0.7792 (77.92%)
+  Precision: 0.8233
+  Recall: 0.7792
+  F1-Score: 0.8006
+  Support: 317
+
+Lamium purpureum L:
+  Accuracy: 0.9207 (92.07%)
+  Precision: 0.9121
+  Recall: 0.9207
+  F1-Score: 0.9164
+  Support: 845
+
+Lapsana communis L:
+  Accuracy: 0.9294 (92.94%)
+  Precision: 0.8903
+  Recall: 0.9294
+  F1-Score: 0.9094
+  Support: 524
+
+Lavandula angustifolia Mill:
+  Accuracy: 0.9223 (92.23%)
+  Precision: 0.8813
+  Recall: 0.9223
+  F1-Score: 0.9013
+  Support: 515
+
+Lavandula stoechas L:
+  Accuracy: 0.8374 (83.74%)
+  Precision: 0.9237
+  Recall: 0.8374
+  F1-Score: 0.8784
+  Support: 289
+
+Liriodendron tulipifera L:
+  Accuracy: 0.9392 (93.92%)
+  Precision: 0.9229
+  Recall: 0.9392
+  F1-Score: 0.9310
+  Support: 395
+
+Lupinus polyphyllus Lindl:
+  Accuracy: 0.9692 (96.92%)
+  Precision: 0.9855
+  Recall: 0.9692
+  F1-Score: 0.9773
+  Support: 422
+
+Melilotus albus Medik:
+  Accuracy: 0.9423 (94.23%)
+  Precision: 0.8627
+  Recall: 0.9423
+  F1-Score: 0.9007
+  Support: 260
+
+Mercurialis annua L:
+  Accuracy: 0.9091 (90.91%)
+  Precision: 0.9170
+  Recall: 0.9091
+  F1-Score: 0.9130
+  Support: 231
+
+Nandina domestica Thunb:
+  Accuracy: 0.9368 (93.68%)
+  Precision: 0.8763
+  Recall: 0.9368
+  F1-Score: 0.9056
+  Support: 174
+
+Nymphaea alba L:
+  Accuracy: 0.9766 (97.66%)
+  Precision: 0.9824
+  Recall: 0.9766
+  F1-Score: 0.9795
+  Support: 171
+
+Ophrys apifera Huds:
+  Accuracy: 0.9647 (96.47%)
+  Precision: 0.9856
+  Recall: 0.9647
+  F1-Score: 0.9750
+  Support: 283
+
+Pancratium maritimum L:
+  Accuracy: 0.9692 (96.92%)
+  Precision: 0.9403
+  Recall: 0.9692
+  F1-Score: 0.9545
+  Support: 195
+
+Papaver rhoeas L:
+  Accuracy: 0.9149 (91.49%)
+  Precision: 0.9137
+  Recall: 0.9149
+  F1-Score: 0.9143
+  Support: 752
+
+Papaver somniferum L:
+  Accuracy: 0.8848 (88.48%)
+  Precision: 0.9065
+  Recall: 0.8848
+  F1-Score: 0.8955
+  Support: 460
+
+Pelargonium graveolens L'HÃ©r:
+  Accuracy: 0.8235 (82.35%)
+  Precision: 0.7940
+  Recall: 0.8235
+  F1-Score: 0.8085
+  Support: 323
+
+Pelargonium inquinans (L.) Aiton:
+  Accuracy: 0.2798 (27.98%)
+  Precision: 0.5510
+  Recall: 0.2798
+  F1-Score: 0.3711
+  Support: 193
+
+Pelargonium zonale (L.) L'HÃ©r:
+  Accuracy: 0.2024 (20.24%)
+  Precision: 0.2742
+  Recall: 0.2024
+  F1-Score: 0.2329
+  Support: 168
+
+Pelargonium zonale (L.) L'HÃ©r. ex Aiton:
+  Accuracy: 0.7139 (71.39%)
+  Precision: 0.5267
+  Recall: 0.7139
+  F1-Score: 0.6061
+  Support: 332
+
+Perovskia atriplicifolia Benth:
+  Accuracy: 0.9435 (94.35%)
+  Precision: 0.9404
+  Recall: 0.9435
+  F1-Score: 0.9420
+  Support: 301
+
+Punica granatum L:
+  Accuracy: 0.9205 (92.05%)
+  Precision: 0.8901
+  Recall: 0.9205
+  F1-Score: 0.9050
+  Support: 528
+
+Pyracantha coccinea M.Roem:
+  Accuracy: 0.9380 (93.80%)
+  Precision: 0.9241
+  Recall: 0.9380
+  F1-Score: 0.9310
+  Support: 597
+
+Schefflera arboricola (Hayata) Merr:
+  Accuracy: 0.9562 (95.62%)
+  Precision: 0.9660
+  Recall: 0.9562
+  F1-Score: 0.9611
+  Support: 297
+
+Sedum acre L:
+  Accuracy: 0.8375 (83.75%)
+  Precision: 0.8874
+  Recall: 0.8375
+  F1-Score: 0.8617
+  Support: 320
+
+Sedum album L:
+  Accuracy: 0.8944 (89.44%)
+  Precision: 0.8628
+  Recall: 0.8944
+  F1-Score: 0.8783
+  Support: 464
+
+Sedum rupestre L:
+  Accuracy: 0.7388 (73.88%)
+  Precision: 0.7418
+  Recall: 0.7388
+  F1-Score: 0.7403
+  Support: 245
+
+Sedum sediforme (Jacq.) Pau:
+  Accuracy: 0.7635 (76.35%)
+  Precision: 0.8248
+  Recall: 0.7635
+  F1-Score: 0.7930
+  Support: 296
+
+Smilax aspera L:
+  Accuracy: 0.8296 (82.96%)
+  Precision: 0.8981
+  Recall: 0.8296
+  F1-Score: 0.8625
+  Support: 223
+
+Tagetes erecta L:
+  Accuracy: 0.8539 (85.39%)
+  Precision: 0.7664
+  Recall: 0.8539
+  F1-Score: 0.8078
+  Support: 438
+
+Tagetes patula L:
+  Accuracy: 0.4158 (41.58%)
+  Precision: 0.5809
+  Recall: 0.4158
+  F1-Score: 0.4847
+  Support: 190
+
+Trachelospermum jasminoides (Lindl.) Lem:
+  Accuracy: 0.9101 (91.01%)
+  Precision: 0.9382
+  Recall: 0.9101
+  F1-Score: 0.9239
+  Support: 367
+
+Tradescantia fluminensis Vell:
+  Accuracy: 0.8776 (87.76%)
+  Precision: 0.7890
+  Recall: 0.8776
+  F1-Score: 0.8309
+  Support: 196
+
+Tradescantia pallida (Rose) D.R.Hunt:
+  Accuracy: 0.9580 (95.80%)
+  Precision: 0.9246
+  Recall: 0.9580
+  F1-Score: 0.9410
+  Support: 333
+
+Tradescantia spathacea Sw:
+  Accuracy: 0.9540 (95.40%)
+  Precision: 0.9486
+  Recall: 0.9540
+  F1-Score: 0.9513
+  Support: 174
+
+Tradescantia virginiana L:
+  Accuracy: 0.9573 (95.73%)
+  Precision: 0.9665
+  Recall: 0.9573
+  F1-Score: 0.9619
+  Support: 211
+
+Tradescantia zebrina Bosse:
+  Accuracy: 0.8657 (86.57%)
+  Precision: 0.9699
+  Recall: 0.8657
+  F1-Score: 0.9148
+  Support: 335
+
+Trifolium incarnatum L:
+  Accuracy: 0.9558 (95.58%)
+  Precision: 0.9636
+  Recall: 0.9558
+  F1-Score: 0.9597
+  Support: 249
+
+Zamioculcas zamiifolia (Lodd.) Engl:
+  Accuracy: 0.9785 (97.85%)
+  Precision: 0.9637
+  Recall: 0.9785
+  F1-Score: 0.9711
+  Support: 326
+
+BEST PERFORMING CLASSES (Top 10)
+----------------------------------------
+ 1. Fittonia albivenis (Lindl. ex Veitch) Brummitt: 0.9899 (98.99%)
+ 2. Anthurium andraeanum Linden ex AndrÃ©: 0.9881 (98.81%)
+ 3. Zamioculcas zamiifolia (Lodd.) Engl: 0.9785 (97.85%)
+ 4. Kniphofia uvaria (L.) Hook: 0.9781 (97.81%)
+ 5. Nymphaea alba L: 0.9766 (97.66%)
+ 6. Epipactis helleborine (L.) Crantz: 0.9716 (97.16%)
+ 7. Pancratium maritimum L: 0.9692 (96.92%)
+ 8. Lupinus polyphyllus Lindl: 0.9692 (96.92%)
+ 9. Fragaria vesca L: 0.9683 (96.83%)
+10. Anemone nemorosa L: 0.9654 (96.54%)
+
+WORST PERFORMING CLASSES (Bottom 10)
+----------------------------------------
+ 1. Helminthotheca echioides (L.) Holub: 0.8230 (82.30%)
+ 2. Lamium maculatum (L.) L: 0.7792 (77.92%)
+ 3. Sedum sediforme (Jacq.) Pau: 0.7635 (76.35%)
+ 4. Sedum rupestre L: 0.7388 (73.88%)
+ 5. Pelargonium zonale (L.) L'HÃ©r. ex Aiton: 0.7139 (71.39%)
+ 6. Cucurbita pepo L: 0.7085 (70.85%)
+ 7. Cucurbita maxima Duchesne: 0.6310 (63.10%)
+ 8. Tagetes patula L: 0.4158 (41.58%)
+ 9. Pelargonium inquinans (L.) Aiton: 0.2798 (27.98%)
+10. Pelargonium zonale (L.) L'HÃ©r: 0.2024 (20.24%)

@@ -50,7 +50,12 @@ backend/plant_model/*.weights
 **/dataset/
 **/datasets/
 **/dataset_*/
-Plant-Detection-Model-using-Yolo-main/
+
+# Plant-Detection-Model-using-Yolo-main: track ML code & results, ignore heavy files
+Plant-Detection-Model-using-Yolo-main/**/Plants_Dataset/
+Plant-Detection-Model-using-Yolo-main/**/Plants_Dataset.zip
+Plant-Detection-Model-using-Yolo-main/**/*.pt
+Plant-Detection-Model-using-Yolo-main/**/.idea/
 
 # =========================
 # IDE & OS

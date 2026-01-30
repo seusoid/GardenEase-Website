@@ -1,0 +1,92 @@
+dataset:
+  names: []
+  nc: 70
+  path: D:/Projects/mujeb/model trainng/Plants_Datadet
+  test: test
+  train: train
+  val: val
+inference:
+  agnostic_nms: false
+  augment: false
+  classes: null
+  conf: 0.25
+  dnn: false
+  exist_ok: false
+  half: false
+  hide_conf: false
+  hide_labels: false
+  iou: 0.45
+  line_thickness: 3
+  max_det: 1000
+  name: exp
+  project: runs/detect
+  update: false
+  visualize: false
+logging:
+  boxes: true
+  retina_masks: false
+  save_conf: false
+  save_crop: false
+  save_txt: false
+  show_conf: true
+  show_labels: true
+  verbose: true
+  vid_stride: 1
+model:
+  architecture: yolov8n-cls.pt
+  freeze_backbone: false
+  pretrained: true
+performance:
+  amp: true
+  cache: false
+  dropout: 0.1
+  fraction: 1.0
+  mask_ratio: 4
+  overlap_mask: true
+  profile: false
+system:
+  cuda: true
+  cudnn_benchmark: true
+  deterministic: false
+  seed: 42
+training:
+  batch_size: 32
+  box: 7.5
+  cls: 0.5
+  copy_paste: 0.0
+  degrees: 0.0
+  device: auto
+  dfl: 1.5
+  epochs: 35
+  fliplr: 0.5
+  flipud: 0.0
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  imgsz: 256
+  lr0: 0.001
+  lrf: 0.01
+  mixup: 0.0
+  momentum: 0.937
+  mosaic: 1.0
+  optimizer: AdamW
+  patience: 2
+  perspective: 0.0
+  save_period: 10
+  scale: 0.5
+  shear: 0.0
+  translate: 0.1
+  warmup_bias_lr: 0.1
+  warmup_epochs: 3.0
+  warmup_momentum: 0.8
+  weight_decay: 0.0005
+  workers: 8
+validation:
+  conf: 0.001
+  dnn: false
+  half: true
+  iou: 0.6
+  max_det: 300
+  save_hybrid: false
+  save_json: false
+  val: true

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labor Booking - Garden Ease</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+</head>
+<body>
+<!-- Header -->
+    <header class="navbar" id="navbar">
+      <div class="logo">GARDEN <span class="ease">EASE</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Products</a></li>
+      
+        <li>
+          <a href="../Cart/index.html" class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+          </a>
+        </li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Get the best garden help.</h1>
+      <p>Expert gardening services at your doorstep.</p>
+      <button class="btn-primary hero-book-now" id="scroll-to-laborers">Book Now</button>
+
+    </div>
+  </section>
+
+  <!-- Enhance Your Garden Section -->
+  <section class="enhance">
+    <h2>Enhance Your Garden</h2>
+    <p>Discover our range of services to transform your outdoor space into a lush paradise.</p>
+    <button class="btn-primary">Explore Services</button>
+  </section>
+
+  <!-- Available Laborers Section -->
+  <section class="laborers" id="laborers-section">
+    <h2>Available Laborers</h2>
+    <div class="laborer-cards">
+      <div class="laborer-card">
+        <img src="Pictures/labor1.jpg" alt="Laborer">
+        
+        <h3>John Doe</h3>
+        <p>Skills: Carpentry, Plumbing</p>
+        <p>Rate: $25/hr, Available</p>
+        <button class="btn-primary">Book Now</button>
+      </div>
+      <div class="laborer-card">
+        <img src="Pictures/labor2.avif" alt="Laborer">
+        <h3>Jane Smith</h3>
+        <p>Skills: Painting, Electrician</p>
+        <p>Rate: $30/hr, Available</p>
+        <button class="btn-primary">Book Now</button>
+      </div>
+      <!-- New Laborers -->
+      <div class="laborer-card">
+        <img src="Pictures/labor3.jpg" alt="Laborer">
+        <h3>Mark Allen</h3>
+        <p>Skills: Gardening, Landscaping</p>
+        <p>Rate: $35/hr, Available</p>
+        <button class="btn-primary">Book Now</button>
+      </div>
+      <div class="laborer-card">
+        <img src="Pictures/labor4.webp" alt="Laborer">
+        <h3>Susan Taylor</h3>
+        <p>Skills: Irrigation Systems, Soil Testing</p>
+        <p>Rate: $40/hr, Available</p>
+        <button class="btn-primary">Book Now</button>
+      </div>
+      <div class="laborer-card">
+        <img src="Pictures/labor5.webp" alt="Laborer">
+        <h3>Tom Brown</h3>
+        <p>Skills: Tree Pruning, Plant Health</p>
+        <p>Rate: $50/hr, Available</p>
+        <button class="btn-primary">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+
+
+   <!-- Booking Modal  Hidden-->
+<div id="booking-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Book a Service</h2>
+    <form id="booking-form">
+      <!-- Date Selection -->
+      <label for="booking-date">Select a Date:</label>
+      <input type="date" id="booking-date" required>
+      
+      <!-- Time Selection -->
+      <label for="preferred-time">Preferred Time:</label>
+      <select id="preferred-time" required>
+        <option value="" disabled selected>Select Time</option>
+        <option value="early-morning">Early Morning</option>
+        <option value="midday">Midday</option>
+        <option value="evening">Evening</option>
+      </select>
+
+      <!-- Service Type -->
+      <label for="service-type">Service Type:</label>
+      <select id="service-type" required>
+        <option value="" disabled selected>Select Service</option>
+        <option value="planting-garden">Planting Garden</option>
+        <option value="maintaining-garden">Maintaining Garden</option>
+        <option value="landscaping">Landscaping</option>
+      </select>
+
+      <!-- Message -->
+      <label for="booking-message">Message (Optional):</label>
+      <textarea id="booking-message" placeholder="Add any additional details..."></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-primary">Confirm Booking</button>
+    </form>
+
+    <!-- Close Modal Button -->
+    <button id="close-booking-modal" class="btn-secondary">Cancel</button>
+  </div>
+</div>
+
+  <!-- Review Section -->
+<section class="reviews">
+  <h2>Customer Feedback</h2>
+  <p>Share your experience with our laborers to help others make informed choices.</p>
+
+  <form id="review-form">
+    <label for="review-name">Your Name:</label>
+    <input type="text" id="review-name" placeholder="Enter your name" required>
+
+    <label for="review-rating">Your Rating:</label>
+    <div class="star-rating">
+      <span data-value="1">&#9733;</span>
+      <span data-value="2">&#9733;</span>
+      <span data-value="3">&#9733;</span>
+      <span data-value="4">&#9733;</span>
+      <span data-value="5">&#9733;</span>
+    </div>
+    <input type="hidden" id="review-rating" required>
+
+    <label for="review-comment">Your Feedback:</label>
+    <textarea id="review-comment" placeholder="Write your review..." required></textarea>
+
+    <button type="submit" class="btn-primary">Submit Review</button>
+  </form>
+
+  <div id="review-list">
+    <h3>Recent Reviews</h3>
+    <!-- Reviews will be dynamically added here -->
+  </div>
+</section>
+
+   
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question">How do I start a garden? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer hidden">Begin by choosing a location with good sunlight, preparing the soil, and selecting plants suited for your climate.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What are the best plants for beginners? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer hidden">Some of the best plants for beginners include pothos, succulents, and spider plants.</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>Garden Ease</h3>
+          <p>
+            Your trusted companion for all gardening needs. Grow with us as we
+            help you cultivate the garden of your dreams.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Garden Tips</a></li>
+            <li><a href="#">Plant Care</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 Garden Ease. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+ENV/
+
+# =========================
+# Django
+# =========================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+backend/media/
+staticfiles/
+*.pot
+
+# =========================
+# ML / Plant Detection
+# -------------------------
+# KEPT (to show your work on GitHub):
+#   - backend/plant_detection/   (all code: views, urls, templates, sample images)
+#   - backend/plant_model/       (folder + README; model file excluded below)
+# IGNORED (too large or not needed in repo):
+# -------------------------
+# Trained model weights only (best.pt is large) - document download in README
+backend/plant_model/*.pt
+backend/plant_model/*.pth
+backend/plant_model/*.onnx
+backend/plant_model/*.weights
+
+# Training outputs (optional; uncomment if you generate these)
+# runs/
+# wandb/
+
+# Datasets - do not upload (large; use Git LFS or external link if needed)
+**/dataset/
+**/datasets/
+**/dataset_*/
+Plant-Detection-Model-using-Yolo-main/
+
+# =========================
+# IDE & OS
+# =========================
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Secrets
+# =========================
+.env
+.env.local
+.env.*.local
+*.pem
+secrets.json

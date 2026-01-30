@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Booking History - Garden Ease</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">GARDEN <span class="ease">EASE</span></div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Identify plant</a></li>
+      <li><a href="../Cart/index.html" class="contact-btn">Cart</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="admin-container">
+      <!-- Admin Header -->
+      <div class="admin-header">
+        <h1>Admin Booking History</h1>
+        <p>View and manage all user bookings across the platform</p>
+        <div class="stats-card">
+          <i class="fas fa-calendar-check"></i>
+          <span id="total-bookings">Loading...</span> Total Bookings
+        </div>
+      </div>
+
+      <!-- Filters Section -->
+      <div class="filters-section">
+        <div class="filters-title">
+          <i class="fas fa-filter"></i>
+          Filter Bookings
+        </div>
+        <div class="filters-grid">
+          <div class="filter-group">
+            <label for="service-filter">Service Type</label>
+            <select id="service-filter">
+              <option value="">All Services</option>
+              <option value="maintaining-garden">Maintaining Garden</option>
+              <option value="lawn-mowing">Lawn Mowing</option>
+              <option value="tree-pruning">Tree Pruning</option>
+              <option value="plant-watering">Plant Watering</option>
+              <option value="weed-removal">Weed Removal</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="time-filter">Time Slot</label>
+            <select id="time-filter">
+              <option value="">All Time Slots</option>
+              <option value="morning">Morning</option>
+              <option value="midday">Midday</option>
+              <option value="evening">Evening</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="date-filter">Booking Date</label>
+            <input type="date" id="date-filter">
+          </div>
+        </div>
+      </div>
+
+      <!-- Bookings Section -->
+      <div class="bookings-section">
+        <div class="section-header">
+          <i class="fas fa-list-alt"></i>
+          <h2>All Bookings</h2>
+        </div>
+        <div id="bookings-grid" class="bookings-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Garden Ease. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

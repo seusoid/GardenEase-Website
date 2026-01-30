@@ -1,0 +1,21 @@
+# GardenEase Backend Dependencies
+# Python 3.10+ recommended
+
+# Core
+Django>=5.2,<6.0
+
+# Database (MongoDB ODM)
+mongoengine>=0.27.0
+
+# API & CORS
+django-cors-headers>=4.3.0
+
+# Authentication
+social-auth-app-django>=5.4.0
+
+# Plant Detection (YOLO)
+ultralytics>=8.0.0
+# Note: ultralytics pulls in PyTorch. For CPU-only: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Image handling (used with file uploads)
+Pillow>=10.0.0

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Login Error</title></head>
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.opener.postMessage({
+        type: 'GOOGLE_AUTH_ERROR',
+        error: '{{ error }}'
+      }, 'http://127.0.0.1:5500');
+      window.close();
+    });
+  </script>
+</body>
+</html>

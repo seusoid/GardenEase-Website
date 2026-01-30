@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication Success</title>
+</head>
+<body>
+    <script>
+        
+        window.opener.postMessage({
+            type: 'GOOGLE_AUTH_SUCCESS',
+            user: userData
+        }, 'http://127.0.0.1:5500');
+        window.close();
+    </script>
+</body>
+</html>

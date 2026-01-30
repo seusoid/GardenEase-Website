@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication Error</title>
+</head>
+<body>
+    <script>
+        window.opener.postMessage({
+            type: 'GOOGLE_AUTH_ERROR',
+            error: '{{ error }}'
+        }, 'http://127.0.0.1:5500');
+        window.close();
+    </script>
+</body>
+</html>

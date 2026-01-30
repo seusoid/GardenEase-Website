@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garden Harmony - Community</title>
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+  />
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar" id="navbar">
+      <div class="logo">GARDEN <span class="ease">EASE</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Products</a></li>
+        <li><a href="#services">Identify plant</a></li>
+        <li>
+          <a href="../Cart/index.html" class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+          </a>
+        </li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>WE GROW TOGETHER</h1>
+    <div class="featured-post">
+        <img src="Pictures/top picture.webp" alt="Garden Design">
+        <!-- // Clone images to create an infinite scroll effect -->
+        <section class="image-carousel">
+            <div class="carousel-wrapper">
+              <div class="carousel">
+                
+                <img src="Pictures/communityy.jpg" alt="Image 2">
+                <img src="Pictures/community.jpg" alt="Image 3">
+                <img src="Pictures/wee.jpg" alt="Image 4">
+                <img src="Pictures/top picture.webp" alt="Image 5">
+                <img src="Pictures/design.jpg" alt="Image 5">
+                <img src="Pictures/design2.jpg" alt="Image 5">
+                <img src="Pictures/suggestions.jpg" alt="Image 5">
+                <img src="Pictures/wee1.jpg" alt="Image 5">
+              </div>
+            </div>
+          </section>
+          
+      <div class="featured-content">
+        <h2>Creating a Lush Oasis: Tips and Tricks</h2>
+        <p>Explore tips for creating your dream garden with lush greenery and vibrant flowers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sharing Ideas Section -->
+  <section class="sharing-ideas">
+    <h2>Sharing Ideas</h2>
+    <div id="posts-container" class="posts-grid"></div>
+
+    <!-- Tabs for Different Categories -->
+    <div class="idea-tabs">
+      <button class="tab active" data-category="sharing">Sharing Ideas</button>
+      <button class="tab" data-category="problems">Plant Problems</button>
+      <button class="tab" data-category="design">Show Us Your Design</button>
+      <button class="tab" data-category="suggestions">Request Suggestions</button>
+    </div>
+    <!-- Container to Dynamically Load Posts -->
+    <div id="posts-container" class="posts-grid"></div>
+    <!-- Button to Add a Post -->
+    <div class="post-controls">
+      <button class="btn-primary" id="add-post">
+        <i class="fa fa-camera" aria-hidden="true"></i> Share Your Idea
+      </button>
+    </div>
+  </section>
+
+  <!-- Post Form Modal -->
+  <div id="post-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Create a Post</h2>
+      <form id="post-form">
+        <label for="post-image">Upload an Image:</label>
+        <input type="file" id="post-image" accept="image/*">
+        <label for="post-text">Write a Comment:</label>
+        <textarea id="post-text" placeholder="Share your thoughts..."></textarea>
+        <button type="submit" class="btn-primary">Submit Post</button>
+      </form>
+      <button id="close-modal" class="btn-secondary">Cancel</button>
+    </div>
+  </div>
+
+  
+  <section class="call-to-action">
+    <h2>Let's Grow Together</h2>
+    <p>Share your first post and join our thriving gardening community today!</p>
+    <button class="btn-primary">Share it now</button>
+  </section>
+
+  <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>Garden Ease</h3>
+          <p>
+            Your trusted companion for all gardening needs. Grow with us as we
+            help you cultivate the garden of your dreams.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Garden Tips</a></li>
+            <li><a href="#">Plant Care</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 Garden Ease. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  <!-- Reply Modal -->
+  <div id="reply-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Write a Reply</h2>
+      <form id="reply-form">
+        <label for="reply-text">Your Comment:</label>
+        <textarea id="reply-text" placeholder="Write your reply..."></textarea>
+        <label for="reply-image">Upload an Image:</label>
+        <input type="file" id="reply-image" accept="image/*">
+        <button type="submit" class="btn-primary">Submit Reply</button>
+      </form>
+      <button id="close-reply-modal" class="btn-secondary">Cancel</button>
+    </div>
+  </div>
+
+ 
+  <div id="image-viewer-modal" class="modal hidden">
+    <div class="modal-content">
+      <img id="image-viewer" src="" alt="Reply Image">
+      <button id="close-image-viewer" class="btn-secondary">Close</button>
+    </div>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

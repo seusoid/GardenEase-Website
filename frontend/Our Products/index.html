@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GardenVista - Plants</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="navbar" id="navbar">
+      <div class="logo">GARDEN <span class="ease">EASE</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Products</a></li>
+        <li><a href="#services">Identify plant</a></li>
+        <li>
+          <a href="../Cart/index.html" class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+          </a>
+        </li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Find Your Favorite Plants</h1>
+      <p>Discover a world of greenery and bring life to your space.</p>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+      <h2>Explore Our Categories</h2>
+      <p>Discover a wide variety of plants tailored to your gardening needs.</p>
+    </section>
+
+    <!-- Featured Plants -->
+    <section class="featured-plants">
+      <h2>Featured Plants</h2>
+      <div class="plant-tabs">
+        <button class="tab active" data-category="fragrant">Fragrant</button>
+        <button class="tab" data-category="indoor">Indoor</button>
+        <button class="tab" data-category="outdoor">Outdoor</button>
+        <button class="tab" data-category="trees">Trees</button>
+        <button class="tab" data-category="fruits">Fruits</button>
+      </div>
+      <div id="plant-container" class="plants-grid">
+        <div class="plant-card">
+          <img src="${plant.image}" alt="${plant.name}" />
+          <h3>${plant.name}</h3>
+          <p>PKR ${plant.price}</p>
+          <button
+            class="btn-primary"
+            data-id="${plant._id}"
+            data-name="${plant.name}"
+            data-price="${plant.price}"
+            data-image="${plant.image}"
+            onclick="openModal(this)"
+          >
+            Shop Now
+          </button>
+        </div>
+        `).join("");
+      </div>
+    </section>
+
+    <!-- Quantity Modal -->
+    <div id="quantity-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Buy Product</h2>
+        <p>
+          <strong>Product:</strong> <span class="modal-product-name"></span>
+        </p>
+        <p>
+          <strong>Price per item:</strong>
+          <span class="modal-product-price"></span>
+        </p>
+        <label for="quantity-input">Quantity:</label>
+        <input type="number" id="quantity-input" min="1" value="1" />
+        <p>
+          <strong>Total Price:</strong> <span class="modal-total-price"></span>
+        </p>
+        <button class="btn-primary" data-id="${product._id}">
+          Add to Cart
+        </button>
+        <button id="close-modal" class="btn-secondary">Cancel</button>
+      </div>
+    </div>
+
+        <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>Garden Ease</h3>
+          <p>
+            Your trusted companion for all gardening needs. Grow with us as we
+            help you cultivate the garden of your dreams.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Garden Tips</a></li>
+            <li><a href="#">Plant Care</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 Garden Ease. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

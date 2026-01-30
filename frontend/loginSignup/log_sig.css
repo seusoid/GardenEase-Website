@@ -1,0 +1,483 @@
+/* REPLACE the entire CSS file with this modern, Garden Ease themed version: */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: linear-gradient(135deg, rgba(9, 9, 9, 0.9), rgba(190, 214, 202, 0.8)), url('Importance2.jpg') center/cover no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	height: 100vh;
+	margin: 0;
+	color: #2d3748;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Background overlay for better readability */
+body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(circle at center, transparent 0%, rgba(45, 80, 22, 0.3) 100%);
+	z-index: -1;
+}
+
+h1 {
+	font-weight: 700;
+	margin: 0;
+	color: #2d5016;
+	font-size: 2rem;
+}
+
+h2 {
+	text-align: center;
+	color: #2d5016;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.6;
+	letter-spacing: 0.3px;
+	margin: 1rem 0 1.5rem;
+	color: #4a5568;
+}
+
+span {
+	font-size: 0.9rem;
+	color: #718096;
+}
+
+a {
+	color: #38a169;
+	font-size: 0.9rem;
+	text-decoration: none;
+	margin: 15px 0;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: #2f855a;
+}
+
+button {
+	border-radius: 25px;
+	border: none;
+	background: linear-gradient(135deg, #38a169, #68d391);
+	color: #FFFFFF;
+	font-size: 0.9rem;
+	font-weight: 600;
+	padding: 0.8rem 2.5rem;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	box-shadow: 0 4px 15px rgba(56, 161, 105, 0.3);
+}
+
+button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(56, 161, 105, 0.4);
+}
+
+button:active {
+	transform: translateY(0);
+}
+
+button:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.2);
+}
+
+button.ghost {
+	background: transparent;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	box-shadow: none;
+}
+
+button.ghost:hover {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 3rem;
+	height: 100%;
+	text-align: center;
+	border-radius: 15px 0 0 15px;
+}
+
+input {
+	background-color: #f7fafc;
+	border: 2px solid rgba(56, 161, 105, 0.1);
+	border-radius: 12px;
+	padding: 0.8rem 1rem;
+	margin: 0.5rem 0;
+	width: 100%;
+	color: #2d3748;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+input:focus {
+	outline: none;
+	border-color: #38a169;
+	background-color: #ffffff;
+	box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.1);
+}
+
+input::placeholder {
+	color: #a0aec0;
+}
+
+.container {
+	background-color: #FFFFFF;
+	border-radius: 20px;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 
+				0 15px 35px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+	width: 850px;
+	max-width: 90%;
+	min-height: 550px;
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: linear-gradient(135deg, #2d5016, #38a169, #68d391);
+	background-size: 200% 200%;
+	animation: gradientShift 6s ease infinite;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+	transform: translateX(0);
+	transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	border-radius: 0 20px 20px 0;
+}
+
+@keyframes gradientShift {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+.container.right-panel-active .overlay {
+	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 2.5rem;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.overlay-panel h1 {
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+
+.overlay-panel p {
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: 2rem;
+}
+
+.social-container {
+	margin: 1.5rem 0;
+}
+
+.social-container a {
+	border: 2px solid rgba(56, 161, 105, 0.3);
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0.5rem;
+	height: 45px;
+	width: 45px;
+	color: #38a169;
+	transition: all 0.3s ease;
+	background: #f7fafc;
+}
+
+.social-container a:hover {
+	background: #38a169;
+	color: #ffffff;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(56, 161, 105, 0.3);
+}
+
+/* Password container styling */
+.password-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.password-container input {
+	flex: 1;
+	width: 100%;
+	padding-right: 3rem;
+}
+
+.password-container .toggle-password {
+	position: absolute;
+	right: 1rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.1rem;
+	color: #718096;
+	padding: 0;
+	transition: color 0.3s ease;
+}
+
+.password-container .toggle-password:hover {
+	color: #38a169;
+}
+
+/* Floating animation for background elements */
+.floating-leaves {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: -1;
+}
+
+.floating-leaves .leaf {
+	position: absolute;
+	color: rgba(104, 211, 145, 0.1);
+	font-size: 2rem;
+	animation: float 8s ease-in-out infinite;
+}
+
+.leaf:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.leaf:nth-child(2) { top: 20%; right: 10%; animation-delay: 3s; }
+.leaf:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 6s; }
+.leaf:nth-child(4) { top: 60%; right: 20%; animation-delay: 1.5s; }
+.leaf:nth-child(5) { bottom: 10%; right: 40%; animation-delay: 4.5s; }
+
+@keyframes float {
+	0%, 100% { 
+		transform: translateY(0px) rotate(0deg); 
+		opacity: 0.1;
+	}
+	50% { 
+		transform: translateY(-30px) rotate(180deg); 
+		opacity: 0.3;
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.container {
+		width: 95%;
+		min-height: 500px;
+		margin: 1rem;
+	}
+	
+	.form-container {
+		width: 100% !important;
+		position: static;
+	}
+	
+	.sign-in-container,
+	.sign-up-container {
+		width: 100% !important;
+		position: relative;
+		opacity: 1;
+	}
+	
+	.overlay-container {
+		display: none;
+	}
+	
+	form {
+		padding: 2rem;
+		border-radius: 20px;
+	}
+	
+	h1 {
+		font-size: 1.5rem;
+	}
+	
+	button {
+		padding: 0.7rem 2rem;
+		font-size: 0.8rem;
+	}
+	
+	input {
+		padding: 0.7rem;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		width: 100%;
+		margin: 0;
+		border-radius: 0;
+		min-height: 100vh;
+	}
+	
+	form {
+		padding: 1.5rem;
+		height: auto;
+		min-height: 100vh;
+		justify-content: center;
+	}
+	
+	h1 {
+		font-size: 1.3rem;
+		margin-bottom: 0.5rem;
+	}
+	
+	p {
+		font-size: 0.9rem;
+		margin: 0.5rem 0 1rem;
+	}
+	
+	.social-container {
+		margin: 1rem 0;
+	}
+	
+	.social-container a {
+		width: 40px;
+		height: 40px;
+		margin: 0 0.3rem;
+	}
+}
+
+
+
+.google-btn {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.google-btn:hover {
+    background-color: #357ae8;
+}
+
+.google-btn i {
+    font-size: 18px;
+}

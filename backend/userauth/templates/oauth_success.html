@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login Success</title>
+</head>
+<body>
+    <h1>Login Successful! Redirecting...</h1>
+    <p>Please wait while we redirect you...</p>
+    
+    <script id="user-data" type="application/json">
+        {{ user_data|safe }}
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const data = JSON.parse(
+                document.getElementById('user-data').textContent
+            );
+            
+            // Check if this is a popup (has opener)
+            if (window.opener) {
+                // Send message to parent window
+                window.opener.postMessage({
+                    type: 'GOOGLE_AUTH_SUCCESS',
+                    user: data
+                }, 'http://127.0.0.1:5500');
+                
+                // Close popup
+                window.close();
+            } else {
+                // If not a popup, redirect directly
+                // Store user data in localStorage
+                if (data.email) {
+                    localStorage.setItem("userEmail", data.email);
+                    localStorage.setItem("userName", data.name);
+                    localStorage.setItem("email", data.email);
+                    localStorage.setItem("is_admin", data.is_admin || false);
+                }
+                
+                // Redirect to your landing page
+                setTimeout(() => {
+                    window.location.href = 'http://127.0.0.1:5500/frontend/Index/index.html';
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
